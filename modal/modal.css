@@ -17,6 +17,18 @@ section{
     align-items: center;
 }
 
+.backLink{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #141414;
+    font-weight: 600;
+}
+
 dialog{
     width: 100%;
     display: flex;

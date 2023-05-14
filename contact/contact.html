@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./contact.css">
+    <title>Contact</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <h1>Contact Us</h1>
+            <form action="#">
+                <div>
+                    <label for="email">E-Mail-Adresse</label>
+                    <input type="text" name="email" id="email" placeholder="ex. name@email.com">
+                </div>
+                <div>
+                    <label for="Auftgras">Auftgras ID</label>
+                    <input type="text" name="Auftgras" id="Auftgras" placeholder="Ex . #000000">
+                </div>
+                <div>
+                    <label for="Subject">Subject</label>
+                    <input type="text" name="Subject" id="subject">
+                </div>
+                <div>
+                    <label for="Message">Message</label>
+                    <textarea name="Message" id="message" cols="30" rows="10" placeholder="Bitte schreiben Sie uns Ihr Anliegen"></textarea>
+                </div>
+                <div>
+                    <label for="termsAndCondition">I agree to Terms and Conditions and Privacy Policy</label>
+                    <input type="checkbox" name="termsAndCondition" id="termsAndCondition" class="termsInput">
+                    <div class="dummyCheckbox">
+                        <div class="dummyInnerCheckbox"></div>
+                    </div>
+                </div>
+                <button class="disabled">Rücksendeantrag abschicken</button>
+            </form>
+        </div>
+        <script src="./contact.js"></script>
+    </section>
+</body>
+</html>

@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Merriweather&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border: #cfcfcf solid 1px;
+  padding: 30px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 30px;
+  color: #212529;
+}
+
+h1 {
+  font-family: "Merriweather", serif;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 17px;
+  font-family: "Lato";
+}
+
+form > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 8px;
+}
+
+form > div > label {
+  font-weight: 500;
+    font-size: 14px;
+}
+
+form > div > label::after {
+    content: '*';
+    color: #212529;
+    margin-left: 5px;
+}
+  
+
+form > div > input {
+  width: 100%;
+  padding: 12px;
+  border: #cfcfcf solid 1px;
+  color: #686f75;   
+  border-radius: 5px;
+}
+
+form > div > input:focus {
+    outline: none;
+    border: #cfcfcf solid 1px;
+}
+
+form > div > textarea {
+  width: 100%;
+  padding: 12px;
+  border: #cfcfcf solid 1px;
+  color: #686f75;
+  border-radius: 5px;
+  resize: none;
+}
+
+form > div > textarea:focus {
+    outline: none;
+    border: #cfcfcf solid 1px;
+}
+
+form > div:nth-of-type(5) {
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: start;
+  gap: 15px;
+}
+
+form > div:nth-of-type(5) > input {
+  flex-shrink: 1;
+  flex-basis: 0%;
+}
+
+form > div:nth-of-type(5) > label {
+    font-weight: 600;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+}
+
+.dummyCheckbox {
+    height: 17px;
+    width: 17px;
+    background-color: #EBEBEB;
+    border: #B5B5B5 solid 1px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dummyInnerCheckbox{
+    height: 65%;
+    width: 65%;
+    scale: 0;
+    background-color: #141414;
+    border-radius: 1px;
+    transition: all 0.2s linear;
+}
+
+input[type = "checkbox"]:checked ~ .dummyCheckbox > .dummyInnerCheckbox {
+    scale: 1;
+}
+
+input[type = "checkbox"] {
+    display: none;
+}
+
+form > button {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 16px 0;
+    background-color: #141414;
+    color: #ffffff;
+    font-weight: 700;
+    border-radius: 5px;
+    font-size: 17px;
+    transition: all 0.2s linear;
+}
+
+form > button.disabled{
+    background-color: #EBEBEB;
+    color: #B5B5B5;
+    cursor: not-allowed;
+} 
+
+
+@media (max-width: 340px){
+    .container{
+        padding: 15px;
+        gap: 10px;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    form{
+        gap: 10px;
+    }
+
+    form > div > label {
+        font-size: 10px;
+    }
+
+    form > div:nth-of-type(5) > label{
+        font-size: 10px;
+    }
+
+    form > div:nth-of-type(5) > div {
+        height: 5px;
+        width: 5px;
+    }
+
+    form > button {
+        font-size: 10px;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 648px) {
+  .container {
+    width: 100%;
+    border: none;
+  }
+
+  h1{
+    font-size: 20px;
+  }
+
+  form{
+    gap: 25px;
+  }
+
+  form > div > label {
+    font-size: 12px;
+  }
+
+  form > div:nth-of-type(5) > label{
+    font-size: 12px;
+  }
+
+  form > div:nth-of-type(5) > div {
+    height: 15px;
+    width: 15px;
+  }
+  
+  form > button {
+    font-size: 15px;
+    padding: 12px 0;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 649px) {
+  .container {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container {
+    width: 40vw;
+  }
+}
+
+@media (min-width: 1441px) {
+  .container {
+    width: 30vw;
+  }
+}
+
+@media (min-width: 1921px) {
+  .container {
+    padding: 45px;
+    width: 35vw;
+    gap: 40px;
+  }
+
+  form > div {
+    gap: 15px;
+  }
+
+    form > div > label {
+        font-size: 25px;
+    }
+
+    form > div:nth-of-type(5) > label{
+        font-size: 25px;
+    }
+
+    form > div:nth-of-type(5) > div {
+        height: 20px;
+        width: 20px;
+    }
+
+    form > button {
+        font-size: 20px;
+        padding: 17px 0;
+    }
+
+    form > div > input {
+        padding: 17px;
+    }
+
+    form > div > textarea {
+        padding: 17px;
+    }
+
+    h1{
+        font-size: 45px;
+    }
+
+    form{
+        gap: 40px;
+    }
+
+}
+
+
